@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles.css">
+ 
+  <title>BetKumi Verify Crash</title>
+  
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns ">
+        <div class="column">
+
+          <h1 class="title">
+          <a href="https://betkumi.com/" target="_blank">PAKAKUMI SLIDE</a>
+          - Game Verification Script</h1>
+          <h2 class="subtitle">
+            Third party script used to verify games on SLIDE.PAKAKUMI.COM
+          </h2>
+        </div>
+             
+
+        <div class="column ">
+
+          <div class="field is-grouped">
+            <p class="control">
+              <a href="https://github.com/betkumi/verify" target="_blank" class="button is-info" >
+                <i class="fa fa-github"></i>&nbsp;
+                View Source Code
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>
+    <div class="container">
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="text" id="game_hash_input" placeholder="Game's hash (SHA256)">
+          <span class="icon is-small is-left">
+            <i class="fa fa-key"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="number" id="game_amount_input" min="1" max="100000" step="1" placeholder="Amount of games" value="10">
+          <span class="icon is-small is-left">
+            <i class="fa fa-hashtag"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field is-grouped">
+        <p class="control">
+          <a class="button is-primary" id="game_verify_submit">
+            Verify
+          </a>
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <table class="table is-striped is-fullwidth is-hoverable is-narrow">
+        <thead>
+          <tr>
+            <th><b>Game's hash</b></th>
+            <th><b>Bust</b></th>
+          </tr>
+        </thead>
+        <tbody id="game_verify_table"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
